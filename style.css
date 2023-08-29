@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s linear;
+    position: relative;
+    overflow: hidden;
+}
+h2 {
+    color: white;
+    background: black;
+    padding: 15px;
+    border-radius: 10px;
+}
+.bulle {
+    position: absolute;
+    background-color: rgba(239, 220, 220, 0.6);
+    border-radius: 50%;
+    opacity: 0;
+    animation: anim 5s;
+    z-index: -1;
+}
+@keyframes anim {
+    to {
+        top: -300px;
+        left: var(--left);
+        opacity: 1;
+    }
+}
